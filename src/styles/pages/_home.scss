@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.home {
+  @include flex-center;
+  min-height: 100vh;
+  background-color: $color-background;
+}
