@@ -1,7 +1,14 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .home {
-  @include flex-center;
+  padding: 3rem 0;
   min-height: 100vh;
   background-color: $color-background;
+
+  &__showcases {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
