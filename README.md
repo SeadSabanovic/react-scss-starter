@@ -16,6 +16,7 @@ A modern React starter template with SCSS support, built with Vite. This templat
 
 ## Project Structure
 
+```
 src/styles/
 ├── abstracts/ # Variables, mixins, functions
 ├── base/ # Reset, typography, base styles
@@ -29,6 +30,7 @@ src/styles/
 ├── pages/ # Page-specific styles
 │ └── home.scss
 └── app.scss # Main stylesheet
+```
 
 ## Getting Started
 
@@ -44,7 +46,7 @@ src/styles/
 
 ```bash
 
-git  clone [repository-url]
+git clone https://github.com/SeadSabanovic/react-scss-starter.git
 
 ```
 
