@@ -1,13 +1,111 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
+@use "sass:color";
 
 .button {
-  padding: 0.5em 1em;
+  padding: 8px 16px;
+  border-radius: 4px;
   border: none;
-  border-radius: 0.25em;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  font-weight: 500;
+  transition: all 0.2s;
 
-  &:hover {
-    transform: translateY(-1px);
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Variants (Modifiers)
+  &--primary {
+    background-color: $primary;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust($primary, $lightness: -10%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: color.adjust($primary, $lightness: -20%);
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust($secondary, $lightness: -10%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: color.adjust($secondary, $lightness: -20%);
+    }
+  }
+
+  &--accent {
+    background-color: $accent;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust($accent, $lightness: -10%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: color.adjust($accent, $lightness: -20%);
+    }
+  }
+
+  &--success {
+    background-color: $success;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust($success, $lightness: -10%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: color.adjust($success, $lightness: -20%);
+    }
+  }
+
+  &--error {
+    background-color: $error;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust($error, $lightness: -10%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: color.adjust($error, $lightness: -20%);
+    }
+  }
+
+  &--warning {
+    background-color: $warning;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust($warning, $lightness: -10%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: color.adjust($warning, $lightness: -20%);
+    }
+  }
+
+  // Sizes (Modifiers)
+  &--sm {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  &--md {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  &--lg {
+    padding: 12px 24px;
+    font-size: 18px;
   }
 }

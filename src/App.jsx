@@ -2,6 +2,7 @@ import "./styles/app.scss";
 import Showcase from "./components/Showcase/Showcase";
 import Typography from "./components/Typography/Typography";
 import Colors from "./components/Colors/Colors";
+import Buttons from "./components/Buttons/Buttons";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
             <Typography />
           </Showcase>
           <Showcase title="Buttons">
-            <p>This is a showcase component</p>
+            <Buttons />
           </Showcase>
         </div>
       </div>
